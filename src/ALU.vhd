@@ -137,6 +137,15 @@ begin
          
          end if;
          
+         if(Y="00000000")then flag(2):='1';
+
+            
+         else
+            flag(0):='0';
+         
+         
+         end if;
+         
          
          
             
