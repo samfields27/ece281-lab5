@@ -117,8 +117,22 @@ begin
          
          if(not(i_A(7)xor i_B(7)xor i_op(0)))='1' and ((i_A(7)xor Y(7))='1')and(not i_op(1)='1')
             then flag(0):='1';
+            
          else
             flag(0):='0';
+         
+         
+         end if;
+         
+         
+         
+         
+         if(not(i_op(1))='1') then flag(1):=carry(8); ---Now Using carry
+           
+         else
+         
+            flag(1):='0';
+         
          
          
          end if;
