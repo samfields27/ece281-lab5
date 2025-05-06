@@ -137,19 +137,22 @@ begin
          
          end if;
          
-         if(Y="00000000")then flag(2):='1';
+         if(Y="00000000")then flag(2):='1'; --For Zero
 
             
          else
-            flag(0):='0';
-         
+            flag(2):='0';
          
          end if;
          
+         flag(3):=Y(7);
          
          
             
 
 
-
+         o_flags<=flag;
+         
+         
+    end process;
 end Behavioral;
