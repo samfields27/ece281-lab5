@@ -39,7 +39,19 @@ end controller_fsm;
 
 architecture FSM of controller_fsm is
 
-begin
 
+    signal w_Q : std_logic_vector(3 downto 0):="0001";
+    
+    
+    
+    
+    
+
+begin
+    
+    
+    process(i_adv, i_reset)
+    begin  
+        if
 
 end FSM;
