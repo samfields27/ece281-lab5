@@ -24,12 +24,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity ALU is
     Port ( i_A : in STD_LOGIC_VECTOR (7 downto 0);
@@ -41,7 +41,43 @@ end ALU;
 
 architecture Behavioral of ALU is
 
+    signal numB : std_logic_vector (7 downto 0);
+    
+    signal total : std_logic_vector (7 downto 0);
+    
+    signal carry : std_logic_vector (8 downto 0);
+    
+    
+    
+    
+    
+    component ripple_adder is
+        port(
+        
+        
+            A: in std_logic_vector (3 downto 0);
+            B: in std_logic_vector (3 downto 0);
+            Cin: in std_logic;
+            S: out std_logic_vector (3 downto 0);
+            Cout: out std_logic);
+        end component;
+
+
+
 begin
+
+    carry(0)<=  '0' when i_op=  "000"      else '1';
+    
+    
+    numB<= i_B when i_op="000"   else  not i_B;
+    
+    ripple_adder0: ripple_adder
+        port map(
+            A=>i_A(3 down to 0),
+            B=>numB(3 downto 0)
+
+
+
 
 
 end Behavioral;
