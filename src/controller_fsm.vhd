@@ -52,7 +52,7 @@ begin
     
     process(i_adv, i_reset)
     begin  
-        if i_reset='1' then w_Q <="0000";
+        if i_reset='1' then w_Q <="0001";
         
         
         elsif rising_edge(i_adv) then case w_Q is
