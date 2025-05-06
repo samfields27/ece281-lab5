@@ -56,5 +56,12 @@ begin
         
         
         elsif rising_edge(i_adv) then case w_Q is
+        --
+            when "0001" =>w_Q<="0010";   --0 going to S1
+            when "0010" =>w_Q<="0100"; --S1 to S2 etc.
+            when "0100" =>w_Q<="1000";
+            
+            --when "1000" =>w_Q<="0001";
+            when others =>w_Q<="0001";
 
 end FSM;
