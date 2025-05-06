@@ -108,6 +108,10 @@ begin
             ---
             
          end case;
+         o_result <=Y;
+         -- o_result <=Y;
+         
+         
             
 
 
