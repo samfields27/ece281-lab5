@@ -63,5 +63,14 @@ begin
             
             --when "1000" =>w_Q<="0001";
             when others =>w_Q<="0001";
+            
+            
+           end case;
+           
+           
+        end if;
+        
+    end process;
+     
 
 end FSM;
