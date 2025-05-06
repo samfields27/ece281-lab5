@@ -74,7 +74,10 @@ begin
     ripple_adder0: ripple_adder
         port map(
             A=>i_A(3 down to 0),
-            B=>numB(3 downto 0)
+            B=>numB(3 downto 0),
+            Cin=>carry(0),
+            S=>total(3 downto 0),
+            Cout=>carry(4) );
 
 
 
