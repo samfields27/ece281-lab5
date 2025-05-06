@@ -71,6 +71,10 @@ begin
         end if;
         
     end process;
-     
+    
+    
+
+
+    o_cycle<=w_Q;
 
 end FSM;
