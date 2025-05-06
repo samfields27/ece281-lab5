@@ -85,8 +85,30 @@ begin
             Cin=>carry(4),
             S=>total(7 downto 4),
             Cout=>carry(8) );
-
-
+            
+            
+            
+    process(i_op,i_A,i_B,total,carry)
+        variable Y: std_logic_vector(7 downto 0);
+        
+        variable flag: std_logic_vector(3 downto 0);
+        
+        
+    begin  
+        case i_op is --For adding, subtracting, and + or operations 
+            when "000"=> Y:=total;
+            when "001"=> Y:=total;
+            
+            --when "010"=> Y:=i_A or i_B;
+            when "011"=> Y:=i_A or i_B;
+            
+            when "010"=> Y:=i_A and i_B;
+            when others=> Y:= (others=>'0');
+            
+            ---
+            
+         end case
+            
 
 
 
