@@ -78,6 +78,13 @@ begin
             Cin=>carry(0),
             S=>total(3 downto 0),
             Cout=>carry(4) );
+    ripple_adder1: ripple_adder
+        port map(
+            A=>i_A(7 downto 3),
+            B=>numB(7 downto 3),
+            Cin=>carry(4),
+            S=>total(7 downto 3),
+            Cout=>carry(8) );
 
 
 
